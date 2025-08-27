@@ -1,0 +1,2 @@
+# cloudflare-turnstile-solving
+使用OpenCV检测Cloudflare turnstile挑战并自动点击的简单实现，支持linux和windows的图形化界面环境
