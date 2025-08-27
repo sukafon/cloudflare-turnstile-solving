@@ -1,0 +1,30 @@
+# 仅在docker-webtop容器内测试通过
+
+# 更新包索引
+sudo apk update
+
+# 安装 OpenCV 和 Python 绑定(预编译包，功能裁剪过，足够运行本项目) 推荐
+sudo apk add opencv opencv-dev py3-opencv
+# 或者(编译安装，编译非常慢，可能会失败，或许能够带来更好的性能优化。注意硬盘空间占用)
+sudo apk add --no-cache python3-dev build-base
+pip install opencv-python
+sudo apk del build-base python3-dev cmake # 编译完成后可以卸载编译工具
+# 或者其他环境较完全的系统（如Debian系等）
+pip install opencv-python
+
+# 验证安装
+python3 -c "import cv2; print(cv2.__version__)"
+
+# 安装其他库
+pip install mss
+pip install python-xlib
+
+# 可选 (建议)
+· 根据实际浏览器环境替换template的图片模板，QQ截图即可。
+· 文件名改成template.png和sub_template.png，尺寸和内容最好和浏览器元素一致。
+
+# 添加执行权限
+chmod +x main.py
+
+# 执行程序
+python3 main.py

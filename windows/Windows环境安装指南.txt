@@ -1,0 +1,9 @@
+# 安装依赖
+pip install -r requirements.txt
+
+# 可选 (建议)
+· 根据实际浏览器环境替换template的图片模板，QQ截图即可。
+· 文件名改成template.png和sub_template.png，尺寸和内容最好和浏览器元素一致。
+
+# 执行程序
+python3 main.py
